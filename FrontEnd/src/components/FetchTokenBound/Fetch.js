@@ -24,7 +24,7 @@ function Fetch () {
     });
 
 
-    const payeeIdentity = '0x9647f8990CB5aa9cEa2c8adbCB49E7CF9000Ed6d';
+    const payeeIdentity = '0x7199D548f1B30EA083Fe668202fd5E621241CC89';
     const payerIdentity = '0x7199D548f1B30EA083Fe668202fd5E621241CC89';
     const paymentRecipient = payeeIdentity;
     const feeRecipient = '0x0000000000000000000000000000000000000000';
@@ -36,7 +36,7 @@ function Fetch () {
         currency: {
         type: Types.RequestLogic.CURRENCY.ETH,
         value: '0xBA62BCfcAaFc6622853cca2BE6Ac7d845BC0f2Dc',
-        network: "mantle-testnet",
+        network: "mantle",
         },
         
         // The expected amount as a string, in parsed units, respecting `decimals`
@@ -63,10 +63,10 @@ function Fetch () {
     paymentNetwork: {
         id: Types.Extension.PAYMENT_NETWORK_ID.ETH_FEE_PROXY_CONTRACT,
         parameters: {
-        paymentNetworkName: 'mantle-testnet', 
+        paymentNetworkName: 'mantle', 
         paymentAddress: payeeIdentity,
         feeAddress: feeRecipient,  
-        feeAmount: '0',
+        feeAmount: '1',
         },
     },
     
@@ -95,7 +95,7 @@ function Fetch () {
 
     async function payReq() {
         const request = await requestClient.fromRequestId(
-            '01808aed041ca46973c99228fce8b6174819c98bcb25df648e1747f01c2a9eabba',
+            "01b5f990297f33907e8af74d8645bb3ec548c896528206a2213b05724f5c0427d8",
         );
         const requestData = request.getData();
 
@@ -107,9 +107,9 @@ function Fetch () {
             },
         );
     */
-        const approvalTx = await approveErc20(requestData);
+       /* const approvalTx = await approveErc20(requestData);
         await approvalTx.wait(1);
-
+            */
         const paymentTx = await payRequest(requestData);
         await paymentTx.wait(2);
 
