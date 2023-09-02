@@ -4,9 +4,11 @@ import { Web3SignatureProvider } from '@requestnetwork/web3-signature';
 import { useWalletClient } from "wagmi";
 import { ethers } from "ethers";
 import { Types, Utils } from "@requestnetwork/request-client.js";
-import { hasSufficientFunds } from "@requestnetwork/payment-processor";
+import { hasSufficientFunds, utils } from "@requestnetwork/payment-processor";
 import { approveErc20, hasErc20Approval } from "@requestnetwork/payment-processor";
 import { payRequest } from "@requestnetwork/payment-processor";
+
+
 
 function Fetch () {
     //const xprovider = new ethers.providers.JsonRpcProvider(window.ethereum);
@@ -32,9 +34,9 @@ function Fetch () {
         
         // The currency in which the request is denominated
         currency: {
-        type: Types.RequestLogic.CURRENCY.ERC20,
+        type: Types.RequestLogic.CURRENCY.ETH,
         value: '0xBA62BCfcAaFc6622853cca2BE6Ac7d845BC0f2Dc',
-        network: 'goerli',
+        network: "mantle-testnet",
         },
         
         // The expected amount as a string, in parsed units, respecting `decimals`
@@ -59,9 +61,9 @@ function Fetch () {
     
     // The paymentNetwork is the method of payment and related details.
     paymentNetwork: {
-        id: Types.Extension.PAYMENT_NETWORK_ID.ERC20_FEE_PROXY_CONTRACT,
+        id: Types.Extension.PAYMENT_NETWORK_ID.ETH_FEE_PROXY_CONTRACT,
         parameters: {
-        paymentNetworkName: 'goerli',
+        paymentNetworkName: 'mantle-testnet', 
         paymentAddress: payeeIdentity,
         feeAddress: feeRecipient,  
         feeAmount: '0',

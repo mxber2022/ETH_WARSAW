@@ -5,13 +5,14 @@ import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { Web3Modal } from '@web3modal/react';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { mantle, mantleTestnet, goerli } from 'wagmi/chains';
+import { publicProvider } from 'wagmi/providers/public';
 
 const chains = [mantle, mantleTestnet, goerli];
 const projectId = "59198889d7df78b39ea70d871d0ec131";
 
 const { publicClient } = configureChains(
   chains, 
-  [w3mProvider({ projectId })]
+  [publicProvider()]
 );
 
 const wagmiConfig = createConfig({
