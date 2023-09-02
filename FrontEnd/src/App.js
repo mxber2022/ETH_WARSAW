@@ -4,10 +4,10 @@ import Fetch from './components/FetchTokenBound/Fetch';
 import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum';
 import { Web3Modal } from '@web3modal/react';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { mantle, mantleTestnet } from 'wagmi/chains';
+import { mantle, mantleTestnet, goerli } from 'wagmi/chains';
 
-const chains = [mantle, mantleTestnet];
-const projectId = process.env.REACT_APP_PROJECT_ID;
+const chains = [mantle, mantleTestnet, goerli];
+const projectId = "59198889d7df78b39ea70d871d0ec131";
 
 const { publicClient } = configureChains(
   chains, 

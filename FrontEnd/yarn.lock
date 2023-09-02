@@ -1739,7 +1739,7 @@
     bech32 "1.1.4"
     ws "7.4.6"
 
-"@ethersproject/providers@5.7.2", "@ethersproject/providers@^5.5.3":
+"@ethersproject/providers@5.7.2", "@ethersproject/providers@^5.5.0":
   version "5.7.2"
   resolved "https://registry.yarnpkg.com/@ethersproject/providers/-/providers-5.7.2.tgz#f8b1a4f275d7ce58cf0a2eec222269a08beb18cb"
   integrity sha512-g34EWZ1WWAVgr4aptGlVBF8mhl3VWjv+8hoAnzStu8Ah22VHBsuGzP17eb6xDVRzw895G4W7vvx60lFFur/1Rg==
@@ -2437,6 +2437,126 @@
     "@motionone/dom" "^10.16.2"
     tslib "^2.3.1"
 
+"@near-js/accounts@0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@near-js/accounts/-/accounts-0.1.4.tgz#ff557dc65c5064ee4ac2dbfdd39aa3e35ae4d222"
+  integrity sha512-zHFmL4OUZ4qHXOE+dDBkYgTNHLWC5RmYUVp9LiuGciO5zFPp7WlxmowJL0QjgXqV1w+dNXq3mgmkfAgYVS8Xjw==
+  dependencies:
+    "@near-js/crypto" "0.0.5"
+    "@near-js/providers" "0.0.7"
+    "@near-js/signers" "0.0.5"
+    "@near-js/transactions" "0.2.1"
+    "@near-js/types" "0.0.4"
+    "@near-js/utils" "0.0.4"
+    ajv "^8.11.2"
+    ajv-formats "^2.1.1"
+    bn.js "5.2.1"
+    borsh "^0.7.0"
+    depd "^2.0.0"
+    near-abi "0.1.1"
+
+"@near-js/crypto@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@near-js/crypto/-/crypto-0.0.5.tgz#3191cdc8dcdba572bdead482b5d38f364bdcc2a0"
+  integrity sha512-nbQ971iYES5Spiolt+p568gNuZ//HeMHm3qqT3xT+i8ZzgbC//l6oRf48SUVTPAboQ1TJ5dW/NqcxOY0pe7b4g==
+  dependencies:
+    "@near-js/types" "0.0.4"
+    bn.js "5.2.1"
+    borsh "^0.7.0"
+    tweetnacl "^1.0.1"
+
+"@near-js/keystores-browser@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@near-js/keystores-browser/-/keystores-browser-0.0.5.tgz#7e94181ca5c4fbad8b8e67cda16888b4ccafae61"
+  integrity sha512-mHF3Vcvsr7xnkaM/reOyxtykbE3OWKV6vQzqyTH2tZYT2OTEnj0KhRT9BCFC0Ra67K1zQLbg49Yc/kDCc5qupA==
+  dependencies:
+    "@near-js/crypto" "0.0.5"
+    "@near-js/keystores" "0.0.5"
+
+"@near-js/keystores-node@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@near-js/keystores-node/-/keystores-node-0.0.5.tgz#f474dabbb84590896dd8861bb33a7304580e0d99"
+  integrity sha512-BYmWyGNydfAqi7eYA1Jo8zULL13cxejD2VBr0BBIXx5bJ+BO4TLecsY1xdTBEq06jyWXHa7kV4h8BJzAjvpTLg==
+  dependencies:
+    "@near-js/crypto" "0.0.5"
+    "@near-js/keystores" "0.0.5"
+
+"@near-js/keystores@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@near-js/keystores/-/keystores-0.0.5.tgz#44ec009b23c552809b6f9bc9a83632f79de4112b"
+  integrity sha512-kxqV+gw/3L8/axe9prhlU+M0hfybkxX54xfI0EEpWP2QiUV+qw+jkKolYIbdk5tdEZrGf9jHawh1yFtwP7APPQ==
+  dependencies:
+    "@near-js/crypto" "0.0.5"
+    "@near-js/types" "0.0.4"
+
+"@near-js/providers@0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@near-js/providers/-/providers-0.0.7.tgz#b2189e5d14d1afb1798c91c59e6dfb9bb476f46b"
+  integrity sha512-qj16Ey+vSw7lHE85xW+ykYJoLPr4A6Q/TsfpwhJLS6zBInSC6sKVqPO1L8bK4VA/yB7V7JJPor9UVCWgRXdNEA==
+  dependencies:
+    "@near-js/transactions" "0.2.1"
+    "@near-js/types" "0.0.4"
+    "@near-js/utils" "0.0.4"
+    bn.js "5.2.1"
+    borsh "^0.7.0"
+    http-errors "^1.7.2"
+  optionalDependencies:
+    node-fetch "^2.6.1"
+
+"@near-js/signers@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@near-js/signers/-/signers-0.0.5.tgz#f3f946440314bf039dd32154928163ceaec8bedb"
+  integrity sha512-XJjYYatehxHakHa7WAoiQ8uIBSWBR2EnO4GzlIe8qpWL+LoH4t68MSezC1HwT546y9YHIvePjwDrBeYk8mg20w==
+  dependencies:
+    "@near-js/crypto" "0.0.5"
+    "@near-js/keystores" "0.0.5"
+    js-sha256 "^0.9.0"
+
+"@near-js/transactions@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@near-js/transactions/-/transactions-0.2.1.tgz#ab6d246e94e6f64b4e5a651fe6e9de03dd573521"
+  integrity sha512-V9tXzkICDPruSxihKXkBhUgsI4uvW7TwXlnZS2GZpPsFFiIUeGrso0wo4uiQwB6miFA5q6fKaAtQa4F2v1s+zg==
+  dependencies:
+    "@near-js/crypto" "0.0.5"
+    "@near-js/signers" "0.0.5"
+    "@near-js/types" "0.0.4"
+    "@near-js/utils" "0.0.4"
+    bn.js "5.2.1"
+    borsh "^0.7.0"
+    js-sha256 "^0.9.0"
+
+"@near-js/types@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@near-js/types/-/types-0.0.4.tgz#d941689df41c850aeeeaeb9d498418acec515404"
+  integrity sha512-8TTMbLMnmyG06R5YKWuS/qFG1tOA3/9lX4NgBqQPsvaWmDsa+D+QwOkrEHDegped0ZHQwcjAXjKML1S1TyGYKg==
+  dependencies:
+    bn.js "5.2.1"
+
+"@near-js/utils@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@near-js/utils/-/utils-0.0.4.tgz#1a387f81974ebbfa4521c92590232be97e3335dd"
+  integrity sha512-mPUEPJbTCMicGitjEGvQqOe8AS7O4KkRCxqd0xuE/X6gXF1jz1pYMZn4lNUeUz2C84YnVSGLAM0o9zcN6Y4hiA==
+  dependencies:
+    "@near-js/types" "0.0.4"
+    bn.js "5.2.1"
+    depd "^2.0.0"
+    mustache "^4.0.0"
+
+"@near-js/wallet-account@0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@near-js/wallet-account/-/wallet-account-0.0.7.tgz#efa6738114171b2a6e40e8b35a8194b7cf86c11e"
+  integrity sha512-tmRyieG/wHmuNkg/WGFyKD6iH6atHPbY0rZ5OjOIiteuhZEPgp+z8OBpiQ4qumTa63q46aj/QVSQL0J3+JmBfw==
+  dependencies:
+    "@near-js/accounts" "0.1.4"
+    "@near-js/crypto" "0.0.5"
+    "@near-js/keystores" "0.0.5"
+    "@near-js/signers" "0.0.5"
+    "@near-js/transactions" "0.2.1"
+    "@near-js/types" "0.0.4"
+    "@near-js/utils" "0.0.4"
+    bn.js "5.2.1"
+    borsh "^0.7.0"
+
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
   version "5.1.1-v1"
   resolved "https://registry.yarnpkg.com/@nicolo-ribaudo/eslint-scope-5-internals/-/eslint-scope-5-internals-5.1.1-v1.tgz#dbf733a965ca47b1973177dc0bb6c889edcfb129"
@@ -2521,77 +2641,87 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
-"@requestnetwork/advanced-logic@0.35.0":
-  version "0.35.0"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/advanced-logic/-/advanced-logic-0.35.0.tgz#7fb41a9a87a4affe595d7d42c8af366aefa9fde5"
-  integrity sha512-mISGhQSKC3vBGn1Qmw9dzUiOURgnjaEYnkRSg7uzOJ3Vp6eqvGAIzzmMURXicxcVKP4qeRKWwwii5BRjYHR1gA==
+"@rainbow-me/fee-suggestions@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@rainbow-me/fee-suggestions/-/fee-suggestions-2.1.0.tgz#2e4dd65af91efa07fa49e8d4b4432acac23e219e"
+  integrity sha512-Eo2E3BtlKOeeS8kwmX1tgoeLY97Qf10FUZHnXNx38Yxbe+RgOLYyftbtjwhjttKI6CEYfJ7mEP+lbh/BlgPUAg==
   dependencies:
-    "@requestnetwork/currency" "0.9.0"
-    "@requestnetwork/types" "0.36.0"
-    "@requestnetwork/utils" "0.36.0"
-    "@types/node" "14.14.16"
-    lodash "4.17.21"
-    tslib "2.3.1"
+    "@ethersproject/providers" "^5.5.0"
+    bignumber.js "^9.0.1"
+    ethers "^5.4.2"
+    moving-averages "^4.0.6"
 
-"@requestnetwork/currency@0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/currency/-/currency-0.9.0.tgz#4be7a1c5506ffe35c909f13166ba18ee59a37975"
-  integrity sha512-lRS7YE/rt20BnScWgp0ZPOfapbGZOG/vABdQQR4iR4q6gloHdW738Msp07z2vcyRK8aY1FA9NVgy1xBUwCPlKQ==
+"@requestnetwork/advanced-logic@0.35.1-next.1918+be4b6778":
+  version "0.35.1-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/advanced-logic/-/advanced-logic-0.35.1-next.1918.tgz#c94f989c9efa09ed7dfb17e4bcc5c009049757fb"
+  integrity sha512-BOe1oEeTiUT8mwPSemJvrpSrrMJSqd7gwxkb11+iEhH4ARxzq7Tr9lyONv3sSnmw52noKfPOGU8dbPmdkAKCgA==
+  dependencies:
+    "@requestnetwork/currency" "0.9.1-next.1918+be4b6778"
+    "@requestnetwork/types" "0.36.1-next.1918+be4b6778"
+    "@requestnetwork/utils" "0.36.1-next.1918+be4b6778"
+    "@types/node" "16.11.7"
+    lodash "4.17.21"
+    tslib "2.5.0"
+
+"@requestnetwork/currency@0.9.1-next.1918+be4b6778":
+  version "0.9.1-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/currency/-/currency-0.9.1-next.1918.tgz#98a1ff735a8acb7e5d577cfc10ac4e9e7a49fe44"
+  integrity sha512-ZdtzW7Xx+ANVBmWmuxy7i7VDwm1c5WMSBnKZTl9HzOGlVwTgVYjoozu3IhSMOIaOhJmXyCK/gy3os4tCPRZcrA==
   dependencies:
     "@metamask/contract-metadata" "1.31.0"
-    "@requestnetwork/types" "0.36.0"
-    "@requestnetwork/utils" "0.36.0"
+    "@requestnetwork/types" "0.36.1-next.1918+be4b6778"
+    "@requestnetwork/utils" "0.36.1-next.1918+be4b6778"
     multicoin-address-validator "0.5.2"
     node-dijkstra "2.5.0"
-    tslib "2.3.1"
+    tslib "2.5.0"
 
-"@requestnetwork/data-access@0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/data-access/-/data-access-0.27.0.tgz#e834a13742c243d0b96e5ee2f2b085e2eda55037"
-  integrity sha512-r2yQKU+FjK9RH0AaFdV5XGfAnsMs1rKVWDQ4P+LXIWnPMiDjcmy/kC4BiUkpvApNTrC9w2ErBuvljXkn6AIrTw==
+"@requestnetwork/data-access@0.27.1-next.1918+be4b6778":
+  version "0.27.1-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/data-access/-/data-access-0.27.1-next.1918.tgz#44d14eef046bc5f4859abaaea768e14bba106d59"
+  integrity sha512-TDksEpShIulse7aN66aKMrpevS0Y2mL4kB7+IyESP0SYFIxHt0Z03XMIhq1rPZe2nvDESdZYwNk3+SYAPqtVIg==
   dependencies:
-    "@requestnetwork/multi-format" "0.15.10"
-    "@requestnetwork/types" "0.36.0"
-    "@requestnetwork/utils" "0.36.0"
+    "@requestnetwork/multi-format" "0.15.11-next.1918+be4b6778"
+    "@requestnetwork/types" "0.36.1-next.1918+be4b6778"
+    "@requestnetwork/utils" "0.36.1-next.1918+be4b6778"
     bluebird "3.7.2"
     keyv "4.0.3"
-    tslib "2.3.1"
+    tslib "2.5.0"
 
-"@requestnetwork/data-format@0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/data-format/-/data-format-0.10.0.tgz#bdd427f4e2578595d1298ba97e000042172f815c"
-  integrity sha512-/v60DQVpZ57A18nltdjUqPqc6cfcbOSdWxWK1ETo8CDBKv/1FtfQibKgQjmFKjqlfMnmA95rtwGoe1jOxo8vDg==
+"@requestnetwork/data-format@0.10.1-next.1918+be4b6778":
+  version "0.10.1-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/data-format/-/data-format-0.10.1-next.1918.tgz#ac54df5911d78e3614f0de2c2ea8d63b8e9eaeb2"
+  integrity sha512-n5CD3m7ZIUXJBSZX79GW/v97m2tBZabMswiZNbg35zY3E+iQN/RYvBuqF/S3Ghx8ZycgFBnk3FmBAaScbWRgzw==
   dependencies:
     ajv "6.12.4"
     ethers "5.5.1"
-    tslib "2.3.1"
+    tslib "2.5.0"
 
-"@requestnetwork/epk-signature@0.5.35":
-  version "0.5.35"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/epk-signature/-/epk-signature-0.5.35.tgz#57c48cefbf993a10db626a7d37015a326681dec8"
-  integrity sha512-YGqSh42cQtVIlno58eYrULXmjetJfTTtGSDhBPI/xBqZnNejfKSiR+DhRCVxdNkMiCcYdMxSpJoORukUJj7loQ==
+"@requestnetwork/epk-signature@0.5.36-next.1918+be4b6778":
+  version "0.5.36-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/epk-signature/-/epk-signature-0.5.36-next.1918.tgz#9bb5dc97f7fe23e881dfb007cf1314420453487f"
+  integrity sha512-8Fj4k0TmCtOELuEM78yyHhKquLRs+O0gC3+BAo/F9TPUbl57xM0nBCrpoJOngMY6NWJxgtrShb5KWiCR/JQ5eg==
   dependencies:
-    "@requestnetwork/types" "0.36.0"
-    "@requestnetwork/utils" "0.36.0"
-    tslib "2.3.1"
+    "@requestnetwork/types" "0.36.1-next.1918+be4b6778"
+    "@requestnetwork/utils" "0.36.1-next.1918+be4b6778"
+    tslib "2.5.0"
 
-"@requestnetwork/multi-format@0.15.10":
-  version "0.15.10"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/multi-format/-/multi-format-0.15.10.tgz#ac02d4bf10fa044ea905f984a5739ce270f32675"
-  integrity sha512-6qb59lZ2tpZCpl0+FR1mtxX/Y7bH1SQ0qqNKltb6bbJ7n8lPPgij0PbIQaw1SSVRa53hS4QrOBr2JdZzi20nnA==
+"@requestnetwork/multi-format@0.15.11-next.1918+be4b6778":
+  version "0.15.11-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/multi-format/-/multi-format-0.15.11-next.1918.tgz#8e3ab53e53489ccd2db0d245eee058555b5232f6"
+  integrity sha512-jjcs8L2Pk/eaAyrCNHWfCy1G8xURRJOckyp3PSXX50ahNxn0iDVhfcsxz0tdmIM7zAn4VFcIs73kmGt0pHJXkw==
   dependencies:
-    "@requestnetwork/types" "0.36.0"
-    tslib "2.3.1"
+    "@requestnetwork/types" "0.36.1-next.1918+be4b6778"
+    tslib "2.5.0"
 
-"@requestnetwork/payment-detection@0.36.0":
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/payment-detection/-/payment-detection-0.36.0.tgz#95aea61393cbc791901f4b9a36ccb3c3cfa6aeb9"
-  integrity sha512-LvRWPDGgBvVynLE08YBd6BryCAXSME+Kx40Bn+0wg/aazVHX8oiQndV4e1ZiW3fb6GX3KYf8oc/o5HwwAD2mjA==
+"@requestnetwork/payment-detection@0.36.1-next.1918+be4b6778":
+  version "0.36.1-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/payment-detection/-/payment-detection-0.36.1-next.1918.tgz#9c09ab6c3591c785f8428ee89bc16fb50a5b1cde"
+  integrity sha512-GgOVdTjRczTJFsgoXKmCYQ0ZQaBTbABY1TuNPhtb4XHJXahCYG6Q8tDfwmy61u5zfZ2distxukBuKwoRN7P7Ng==
   dependencies:
-    "@requestnetwork/currency" "0.9.0"
-    "@requestnetwork/smart-contracts" "0.29.0"
-    "@requestnetwork/types" "0.36.0"
-    "@requestnetwork/utils" "0.36.0"
+    "@requestnetwork/currency" "0.9.1-next.1918+be4b6778"
+    "@requestnetwork/smart-contracts" "0.29.1-next.1918+be4b6778"
+    "@requestnetwork/types" "0.36.1-next.1918+be4b6778"
+    "@requestnetwork/utils" "0.36.1-next.1918+be4b6778"
     axios "0.27.2"
     ethers "5.5.1"
     graphql "15.5.1"
@@ -2599,102 +2729,103 @@
     graphql-tag "2.12.4"
     lodash "4.17.21"
     satoshi-bitcoin "1.0.4"
-    tslib "2.3.1"
+    tslib "2.5.0"
 
-"@requestnetwork/payment-processor@^0.38.0":
-  version "0.38.0"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/payment-processor/-/payment-processor-0.38.0.tgz#4f5835cd26076e925c8aad48b8a8c75a908fc1df"
-  integrity sha512-BuAmlnor1r0aiBM7JNfaANcAZs7ei8JXMgiGJ5noa4TcL3ESYgy9WzO7zXAjl1Nzx7D7GamEPzRW3Kz5np8VrA==
+"@requestnetwork/payment-processor@^0.38.1-next.1918":
+  version "0.38.1-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/payment-processor/-/payment-processor-0.38.1-next.1918.tgz#d2bbfc44c6690c027519a0452025705d801e29cd"
+  integrity sha512-67wZEr4j3GZHy4pRbGzY28WMy6Pn0WBvMXyRI2kwYb1QvjtKx9h7qQ1MgviPj9y4DEFejfVlUFwfKTnuD2zarA==
   dependencies:
     "@openzeppelin/contracts" "4.7.3"
-    "@requestnetwork/currency" "0.9.0"
-    "@requestnetwork/payment-detection" "0.36.0"
-    "@requestnetwork/smart-contracts" "0.29.0"
-    "@requestnetwork/types" "0.36.0"
-    "@requestnetwork/utils" "0.36.0"
-    "@superfluid-finance/sdk-core" "0.3.2"
+    "@requestnetwork/currency" "0.9.1-next.1918+be4b6778"
+    "@requestnetwork/payment-detection" "0.36.1-next.1918+be4b6778"
+    "@requestnetwork/smart-contracts" "0.29.1-next.1918+be4b6778"
+    "@requestnetwork/types" "0.36.1-next.1918+be4b6778"
+    "@requestnetwork/utils" "0.36.1-next.1918+be4b6778"
+    "@superfluid-finance/sdk-core" "0.5.0"
     ethers "5.5.1"
-    near-api-js "1.1.0"
-    tslib "2.3.1"
+    near-api-js "2.1.4"
+    tslib "2.5.0"
 
-"@requestnetwork/request-client.js@^0.40.0":
-  version "0.40.0"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/request-client.js/-/request-client.js-0.40.0.tgz#393e4dd0d7f9945af6133348f28b4304afd906ba"
-  integrity sha512-xWC6QD6wBvq6Y4QBoIRAhGPcU6hupN5obXFgUqOdQq3hFrHaf/LBSrV0DM17QCQzAZe0Wz/isMEwDAbsPb5Kiw==
+"@requestnetwork/request-client.js@^0.40.1-next.1918":
+  version "0.40.1-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/request-client.js/-/request-client.js-0.40.1-next.1918.tgz#b14faca1776b2dbbda02b3f100b408c0e8c867aa"
+  integrity sha512-iRjEQCQb9+1vOeBTU6yRmENPBdzTCmVpozWwghAV0cXzncdFXkR1Tq6OP5pQjECW9WMUWYoQuI1GHlY6lVhl0w==
   dependencies:
-    "@requestnetwork/advanced-logic" "0.35.0"
-    "@requestnetwork/currency" "0.9.0"
-    "@requestnetwork/data-access" "0.27.0"
-    "@requestnetwork/data-format" "0.10.0"
-    "@requestnetwork/epk-signature" "0.5.35"
-    "@requestnetwork/multi-format" "0.15.10"
-    "@requestnetwork/payment-detection" "0.36.0"
-    "@requestnetwork/request-logic" "0.26.10"
-    "@requestnetwork/smart-contracts" "0.29.0"
-    "@requestnetwork/transaction-manager" "0.27.0"
-    "@requestnetwork/types" "0.36.0"
-    "@requestnetwork/utils" "0.36.0"
+    "@requestnetwork/advanced-logic" "0.35.1-next.1918+be4b6778"
+    "@requestnetwork/currency" "0.9.1-next.1918+be4b6778"
+    "@requestnetwork/data-access" "0.27.1-next.1918+be4b6778"
+    "@requestnetwork/data-format" "0.10.1-next.1918+be4b6778"
+    "@requestnetwork/epk-signature" "0.5.36-next.1918+be4b6778"
+    "@requestnetwork/multi-format" "0.15.11-next.1918+be4b6778"
+    "@requestnetwork/payment-detection" "0.36.1-next.1918+be4b6778"
+    "@requestnetwork/request-logic" "0.26.11-next.1918+be4b6778"
+    "@requestnetwork/smart-contracts" "0.29.1-next.1918+be4b6778"
+    "@requestnetwork/transaction-manager" "0.27.1-next.1918+be4b6778"
+    "@requestnetwork/types" "0.36.1-next.1918+be4b6778"
+    "@requestnetwork/utils" "0.36.1-next.1918+be4b6778"
     axios "0.27.2"
     ethers "5.5.1"
-    tslib "2.3.1"
+    tslib "2.5.0"
 
-"@requestnetwork/request-logic@0.26.10":
-  version "0.26.10"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/request-logic/-/request-logic-0.26.10.tgz#5a00772c722f276425591d74ae4e4831e1a9bb2d"
-  integrity sha512-ox4NRYtgjloXSivNEaSMiZBNd7Ckkid1TaWxWziV7QOxhOeZudoxBhtjoJF4S7z9pmO/a09otLYfh1yhPGvVKQ==
+"@requestnetwork/request-logic@0.26.11-next.1918+be4b6778":
+  version "0.26.11-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/request-logic/-/request-logic-0.26.11-next.1918.tgz#2b9010baf3e516a8b864202413123cbaf2ab55ec"
+  integrity sha512-BndQw9gOJpq4S1cAlwEjrdnltBxcGBUd26zrcMH5WkyCqWu3lUZhQxJr9IohEoyRZjRkmJ442YWL2EM/5XT+Bw==
   dependencies:
-    "@requestnetwork/advanced-logic" "0.35.0"
-    "@requestnetwork/multi-format" "0.15.10"
-    "@requestnetwork/types" "0.36.0"
-    "@requestnetwork/utils" "0.36.0"
-    semver "5.6.0"
-    tslib "2.3.1"
+    "@requestnetwork/advanced-logic" "0.35.1-next.1918+be4b6778"
+    "@requestnetwork/multi-format" "0.15.11-next.1918+be4b6778"
+    "@requestnetwork/types" "0.36.1-next.1918+be4b6778"
+    "@requestnetwork/utils" "0.36.1-next.1918+be4b6778"
+    semver "7.5.2"
+    tslib "2.5.0"
 
-"@requestnetwork/smart-contracts@0.29.0":
-  version "0.29.0"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/smart-contracts/-/smart-contracts-0.29.0.tgz#f7a9ce4a47953298af50655f1539ffafdaff85d8"
-  integrity sha512-UxkahYZM+kC7fr1ke9Yg7CMilB8UhzBLNfB1GhCorksN/aen1fhb8LkSE9iucQ/nzCoLtsonowpO8lElXAH84g==
+"@requestnetwork/smart-contracts@0.29.1-next.1918+be4b6778":
+  version "0.29.1-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/smart-contracts/-/smart-contracts-0.29.1-next.1918.tgz#3ba1636d06db10143f68c009b60e54ef5e2e0724"
+  integrity sha512-PXZVzLIKAlt7hzfsZ3EAizevYhsAR/kPa19Cl23L57KpX2pJ8ivyzhUG4YNp++FtHpsp3mBB/rPTzqA+jBSwLw==
   dependencies:
-    tslib "2.3.1"
+    tslib "2.5.0"
 
-"@requestnetwork/transaction-manager@0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/transaction-manager/-/transaction-manager-0.27.0.tgz#e31322292305cdfe6f7c14b54deb426e08d6f68c"
-  integrity sha512-CcGBc39QVfHSByKCbZu76TQ94nvzIl/+s353RUK6LPSe+Cgn3VNlNFbn8Hor9Z66AgnQXUERPRtNj7xTsQpHiw==
+"@requestnetwork/transaction-manager@0.27.1-next.1918+be4b6778":
+  version "0.27.1-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/transaction-manager/-/transaction-manager-0.27.1-next.1918.tgz#0c042fda9be3df0a7b6568586c87428c13aed1e4"
+  integrity sha512-BmJH+L0B/saUKEf2jwZVOxIIxokwtcFz258arLRgIn/y/LwMajtJvxszk9I7mSqzEnRTYHbX0YpYCKHXS48eoQ==
   dependencies:
-    "@requestnetwork/multi-format" "0.15.10"
-    "@requestnetwork/types" "0.36.0"
-    "@requestnetwork/utils" "0.36.0"
-    tslib "2.3.1"
+    "@requestnetwork/multi-format" "0.15.11-next.1918+be4b6778"
+    "@requestnetwork/types" "0.36.1-next.1918+be4b6778"
+    "@requestnetwork/utils" "0.36.1-next.1918+be4b6778"
+    tslib "2.5.0"
 
-"@requestnetwork/types@0.36.0":
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/types/-/types-0.36.0.tgz#f20708ecc16907c390a801529c6bf8e4aabf4365"
-  integrity sha512-0H9Ti5qAFklf62YjdjveejUVEBL7GRPNvThz4Dqq8tlC2t4d1RTJt2Hpt1keileczef6QuNbcE0/aD8AMIiNIQ==
+"@requestnetwork/types@0.36.1-next.1918+be4b6778":
+  version "0.36.1-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/types/-/types-0.36.1-next.1918.tgz#3bc8238f55d4e8e946240351f3ae6e13e62ea53b"
+  integrity sha512-H+nevz0EkktqEDC0R8Z3i/dZFCYOVMp/8BuIwgEOr9JKzQYNF4fQKPOv/J7qXDC7q4Rhwi+uAEz8/v2l3daiAg==
   dependencies:
     ethers "5.5.1"
     events "3.2.0"
 
-"@requestnetwork/utils@0.36.0":
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/utils/-/utils-0.36.0.tgz#35ebbefdf4c62d9f4e7ad0ced3fcd8732d801570"
-  integrity sha512-8Am6Z4gvlPfFjcjzvdQJmp6r+JDt7MsyiNapPAESMNBG1/F5MlcEnh+7PYnX4dBkZ0SHIp5qxfJ0TelErCM31g==
+"@requestnetwork/utils@0.36.1-next.1918+be4b6778":
+  version "0.36.1-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/utils/-/utils-0.36.1-next.1918.tgz#ec7a103f81597b69c28b4eaf99eaf207bc09f30e"
+  integrity sha512-fr+fFdyt9tDBxjTyfA1aFyEsi9nG9XgtyDXKSHNHmKzW981PxtXYkL8X1XTkzbRDkqYs/HW/JipbczmgTsBbyw==
   dependencies:
-    "@requestnetwork/types" "0.36.0"
+    "@rainbow-me/fee-suggestions" "2.1.0"
+    "@requestnetwork/types" "0.36.1-next.1918+be4b6778"
     eccrypto "1.1.6"
     ethers "5.5.1"
     secp256k1 "4.0.2"
-    tslib "2.3.1"
+    tslib "2.5.0"
 
-"@requestnetwork/web3-signature@^0.4.36":
-  version "0.4.36"
-  resolved "https://registry.yarnpkg.com/@requestnetwork/web3-signature/-/web3-signature-0.4.36.tgz#acccd3ec8533a3e691edf731a115dd93c34c801b"
-  integrity sha512-JWXWHxJlRXgUWWyacjvjkV7QfeioGQMLdjWm35aOFDT5r+8ivn3d5mMNUYWcD7hVIyaT6TxY33W2F3kHTXArYQ==
+"@requestnetwork/web3-signature@^0.4.37-next.1918":
+  version "0.4.37-next.1918"
+  resolved "https://registry.yarnpkg.com/@requestnetwork/web3-signature/-/web3-signature-0.4.37-next.1918.tgz#76a20b595b58170bf067dad12d5bf0c26279a6a6"
+  integrity sha512-dhhwMlkXgTeeSQxlitPQWFwnQFHPB5EzhFyxuSPCpn7JN9FZaiYLQu8Sti1PNT/u1PfkheTpCb3t2t8G5SUAVQ==
   dependencies:
-    "@requestnetwork/types" "0.36.0"
-    "@requestnetwork/utils" "0.36.0"
+    "@requestnetwork/types" "0.36.1-next.1918+be4b6778"
+    "@requestnetwork/utils" "0.36.1-next.1918+be4b6778"
     ethers "5.5.1"
-    tslib "2.3.1"
+    tslib "2.5.0"
 
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
@@ -2977,17 +3108,15 @@
     "@stablelib/random" "^1.0.2"
     "@stablelib/wipe" "^1.0.1"
 
-"@superfluid-finance/sdk-core@0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@superfluid-finance/sdk-core/-/sdk-core-0.3.2.tgz#cbf4d28399cfc9c15191f6a3aec3c9dde22110eb"
-  integrity sha512-t7xsqSJifsfl+DyroKXGG5awvkESEqN4Cg0cXglD/3RtGNFOTK+73YduX0+CgsTjXY3DJPHDrnhTxrZyt0VXzw==
+"@superfluid-finance/sdk-core@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@superfluid-finance/sdk-core/-/sdk-core-0.5.0.tgz#006312bd109d150a63128b3d8bfe6a6b705132c6"
+  integrity sha512-3R3iHK49h5eaq1QW3CSCszrt6Dp4cLB410OSFRtc+C4xAuS0WjsZFr/qwwEwbjB6Do3gScSrPmxkenHTiHfSRQ==
   dependencies:
-    "@ethersproject/providers" "^5.5.3"
-    ajv "^8.9.0"
     browserify "^17.0.0"
-    ethers "^5.5.4"
-    graphql-request "^3.7.0"
+    graphql-request "^4.3.0"
     lodash "^4.17.21"
+    serialize-error "8.1.0"
     tsify "^5.0.4"
 
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
@@ -3364,7 +3493,7 @@
     expect "^29.0.0"
     pretty-format "^29.0.0"
 
-"@types/json-schema@*", "@types/json-schema@^7.0.4", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.8", "@types/json-schema@^7.0.9":
+"@types/json-schema@*", "@types/json-schema@^7.0.11", "@types/json-schema@^7.0.4", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.8", "@types/json-schema@^7.0.9":
   version "7.0.12"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.12.tgz#d70faba7039d5fca54c83c7dbab41051d2b6f6cb"
   integrity sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==
@@ -3394,10 +3523,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.5.8.tgz#fb171fd22d37ca6e2ea97fde88e6a13ee14bc327"
   integrity sha512-eajsR9aeljqNhK028VG0Wuw+OaY5LLxYmxeoXynIoE6jannr9/Ucd1LL0hSSoafk5LTYG+FfqsyGt81Q6Zkybw==
 
-"@types/node@14.14.16":
-  version "14.14.16"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.16.tgz#3cc351f8d48101deadfed4c9e4f116048d437b4b"
-  integrity sha512-naXYePhweTi+BMv11TgioE2/FXU4fSl29HAH1ffxVciNsH3rYXjNP2yM8wqmSm7jS20gM8TIklKiTen+1iVncw==
+"@types/node@16.11.7":
+  version "16.11.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.7.tgz#36820945061326978c42a01e56b61cd223dfdc42"
+  integrity sha512-QB5D2sqfSjCmTuWcBWyJ+/44bcjO7VbjSbOE0ucoVbAsSNQc4Lt6QkgkVXkTDwkL4z/beecZNDvVX15D4P8Jbw==
 
 "@types/node@^12.12.54":
   version "12.20.55"
@@ -4342,7 +4471,7 @@ ajv@^6.12.2, ajv@^6.12.4, ajv@^6.12.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^8.0.0, ajv@^8.6.0, ajv@^8.9.0:
+ajv@^8.0.0, ajv@^8.11.2, ajv@^8.6.0, ajv@^8.9.0:
   version "8.12.0"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.12.0.tgz#d1a0527323e22f53562c567c00991577dfbe19d1"
   integrity sha512-sRu1kpcO9yLtYxBKvqfTeh9KzZEwO3STyX1HT+4CaDzC6HpTGYhIhPIzj9XuKU7KYDwnaeh5hcOwjy1QuJzBPA==
@@ -4824,6 +4953,11 @@ bigint-buffer@^1.1.5:
   integrity sha512-trfYco6AoZ+rKhKnxA0hgX0HAbVP/s808/EuDSe2JDzUnCp/xAsli35Orvk67UrTEcwuxZqYZDmfA2RXJgxVvA==
   dependencies:
     bindings "^1.3.0"
+
+bignumber.js@^9.0.1:
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-9.1.2.tgz#b7c4242259c008903b13707983b5f4bbd31eda0c"
+  integrity sha512-2/mKyZH9K85bzOEfhXDBFZTGd1CTs+5IHpeFQo9luiBG7hghdC851Pj2WAhb6E3R6b9tZj/XKhbg4fum+Kepug==
 
 binary-extensions@^2.0.0:
   version "2.2.0"
@@ -6887,7 +7021,7 @@ ethers@5.5.1:
     "@ethersproject/web" "5.5.0"
     "@ethersproject/wordlists" "5.5.0"
 
-ethers@^5.5.4:
+ethers@^5.4.2:
   version "5.7.2"
   resolved "https://registry.yarnpkg.com/ethers/-/ethers-5.7.2.tgz#3a7deeabbb8c030d4126b24f84e525466145872e"
   integrity sha512-wswUsmWo1aOK8rR7DIKiWSw9DbLWe6x98Jrn8wcTflTVvaXhAMaB5zGAXy0GYQEQp9iO1iSHWVyARQm11zUtyg==
@@ -7481,12 +7615,12 @@ graphql-request@3.4.0:
     extract-files "^9.0.0"
     form-data "^3.0.0"
 
-graphql-request@^3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/graphql-request/-/graphql-request-3.7.0.tgz#c7406e537084f8b9788541e3e6704340ca13055b"
-  integrity sha512-dw5PxHCgBneN2DDNqpWu8QkbbJ07oOziy8z+bK/TAXufsOLaETuVO4GkXrbs0WjhdKhBMN3BkpN/RIvUHkmNUQ==
+graphql-request@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/graphql-request/-/graphql-request-4.3.0.tgz#b934e08fcae764aa2cdc697d3c821f046cb5dbf2"
+  integrity sha512-2v6hQViJvSsifK606AliqiNiijb1uwWp6Re7o0RTyH+uRTv/u7Uqm2g4Fjq/LgZIzARB38RZEvVBFOQOVdlBow==
   dependencies:
-    cross-fetch "^3.0.6"
+    cross-fetch "^3.1.5"
     extract-files "^9.0.0"
     form-data "^3.0.0"
 
@@ -9443,6 +9577,11 @@ motion@10.16.2:
     "@motionone/utils" "^10.15.1"
     "@motionone/vue" "^10.16.2"
 
+moving-averages@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/moving-averages/-/moving-averages-4.0.6.tgz#4978d4d9f68aef8f2b5fa028b1ec316da0cc8c95"
+  integrity sha512-Jv+mH0emTFP40Q5ONsBqTfIO9NuUyK9zuW4pWbOzWJm8jEqpLBtAH2CnE2MFIuH/G9f9nDugmnDVUJaHx9jckw==
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -9525,21 +9664,38 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-near-api-js@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/near-api-js/-/near-api-js-1.1.0.tgz#907e807f052c1f043c6fbf28f61872de3c02235a"
-  integrity sha512-qYKv1mYsaDZc2uYndhS+ttDhR9+60qFc+ZjD6lWsAxr3ZskMjRwPffDGQZYhC7BRDQMe1HEbk6d5mf+TVm0Lqg==
+near-abi@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/near-abi/-/near-abi-0.1.1.tgz#b7ead408ca4ad11de4fe3e595d30a7a8bc5307e0"
+  integrity sha512-RVDI8O+KVxRpC3KycJ1bpfVj9Zv+xvq9PlW1yIFl46GhrnLw83/72HqHGjGDjQ8DtltkcpSjY9X3YIGZ+1QyzQ==
   dependencies:
+    "@types/json-schema" "^7.0.11"
+
+near-api-js@2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/near-api-js/-/near-api-js-2.1.4.tgz#562bb7047bf3699fbdf78f9a6620366069ad7cd9"
+  integrity sha512-e1XicyvJvQMtu7qrG8oWyAdjHJJCoy+cvbW6h2Dky4yj7vC85omQz/x7IgKl71VhzDj2/TGUwjTVESp6NSe75A==
+  dependencies:
+    "@near-js/accounts" "0.1.4"
+    "@near-js/crypto" "0.0.5"
+    "@near-js/keystores" "0.0.5"
+    "@near-js/keystores-browser" "0.0.5"
+    "@near-js/keystores-node" "0.0.5"
+    "@near-js/providers" "0.0.7"
+    "@near-js/signers" "0.0.5"
+    "@near-js/transactions" "0.2.1"
+    "@near-js/types" "0.0.4"
+    "@near-js/utils" "0.0.4"
+    "@near-js/wallet-account" "0.0.7"
+    ajv "^8.11.2"
+    ajv-formats "^2.1.1"
     bn.js "5.2.1"
     borsh "^0.7.0"
-    bs58 "^4.0.0"
     depd "^2.0.0"
     error-polyfill "^0.1.3"
     http-errors "^1.7.2"
-    js-sha256 "^0.9.0"
-    mustache "^4.0.0"
+    near-abi "0.1.1"
     node-fetch "^2.6.1"
-    text-encoding-utf-8 "^1.0.2"
     tweetnacl "^1.0.1"
 
 negotiator@0.6.3:
@@ -11452,10 +11608,12 @@ selfsigned@^2.1.1:
   dependencies:
     node-forge "^1"
 
-semver@5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
-  integrity sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==
+semver@7.5.2:
+  version "7.5.2"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.2.tgz#5b851e66d1be07c1cdaf37dfc856f543325a2beb"
+  integrity sha512-SoftuTROv/cRjCze/scjGyiDtcUyxw1rgYQSZY7XTmtR5hX+dm76iDbTH8TkLPHCQmlbQVSSbNZCPM2hb0knnQ==
+  dependencies:
+    lru-cache "^6.0.0"
 
 semver@^5.6.0:
   version "5.7.2"
@@ -11492,6 +11650,13 @@ send@0.18.0:
     on-finished "2.4.1"
     range-parser "~1.2.1"
     statuses "2.0.1"
+
+serialize-error@8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/serialize-error/-/serialize-error-8.1.0.tgz#3a069970c712f78634942ddd50fbbc0eaebe2f67"
+  integrity sha512-3NnuWfM6vBYoy5gZFvHiYsVbafvI9vZv/+jlIigFn4oP4zjNPK3LhcY0xSCgeb1a5L8jO71Mit9LlNoi2UfDDQ==
+  dependencies:
+    type-fest "^0.20.2"
 
 serialize-javascript@^4.0.0:
   version "4.0.0"
@@ -12344,10 +12509,10 @@ tslib@1.14.1, tslib@^1.8.1, tslib@^1.9.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
-  integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
+tslib@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.5.0.tgz#42bfed86f5787aeb41d031866c8f402429e0fddf"
+  integrity sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==
 
 tslib@^2.0.0, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.3.1:
   version "2.6.2"
