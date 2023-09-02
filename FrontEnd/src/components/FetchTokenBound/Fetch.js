@@ -7,7 +7,7 @@ import { Types, Utils } from "@requestnetwork/request-client.js";
 import { hasSufficientFunds, utils } from "@requestnetwork/payment-processor";
 import { approveErc20, hasErc20Approval } from "@requestnetwork/payment-processor";
 import { payRequest } from "@requestnetwork/payment-processor";
-
+import { useState } from "react";
 
 
 function Fetch () {
@@ -25,7 +25,20 @@ function Fetch () {
 
 
     const payeeIdentity = '0x7199D548f1B30EA083Fe668202fd5E621241CC89';
-    const payerIdentity = '0x7199D548f1B30EA083Fe668202fd5E621241CC89';
+    //const payerIdentity = '0x7199D548f1B30EA083Fe668202fd5E621241CC89';
+    const [payerIdentity, setPayerIdentity] = useState('');
+    const handlePayerIdentityChange = (e) => {
+        setPayerIdentity(e.target.value);
+    };
+
+    /*
+        Reason
+    */
+    const [reason, setReason] = useState('');
+    const handleReasonChange = (e) => {
+        setReason(e.target.value);
+    };
+
     const paymentRecipient = payeeIdentity;
     const feeRecipient = '0x0000000000000000000000000000000000000000';
 
@@ -73,7 +86,7 @@ function Fetch () {
     // The contentData can contain anything.
     // Consider using rnf_invoice format from @requestnetwork/data-format
     contentData: {
-        reason: '🍕',
+        reason: reason,
         dueDate: '2023.06.16',
     },
     
@@ -85,17 +98,22 @@ function Fetch () {
     };
 
 
+    const [requestId, setRequestId] = useState('');
+
     async function createReq() {
         const request = await requestClient.createRequest(requestCreateParameters);
         console.log("request: ", request);
         const confirmedRequestData = await request.waitForConfirmation();
-        console.log("confirmedRequestData: ", confirmedRequestData);
+        console.log("confirmedRequestData: ", confirmedRequestData.requestId);
         //01808aed041ca46973c99228fce8b6174819c98bcb25df648e1747f01c2a9eabba
+        setRequestId(confirmedRequestData.requestId);
     }
+
+    
 
     async function payReq() {
         const request = await requestClient.fromRequestId(
-            "01b5f990297f33907e8af74d8645bb3ec548c896528206a2213b05724f5c0427d8",
+            requestId,
         );
         const requestData = request.getData();
 
@@ -119,7 +137,22 @@ function Fetch () {
     return(
         <>
             <h1> Mantle X Request</h1>
+
+            <div>
+                <label htmlFor="payerIdentity">Payee</label>
+                <input type="text" id="payerIdentity" name="payerIdentity" value={payerIdentity} onChange={handlePayerIdentityChange} />
+            </div>
+
+            <div>
+                <label htmlFor="reason">Reason:</label>
+                <input type="text" id="reason" name="reason" value={reason} onChange={handleReasonChange} />
+            </div>
+    
             <button onClick={createReq}>Request for Invoice</button>
+
+            {
+                <p>{requestId}</p>
+            }   
 
             <button onClick={payReq}> Pay the request</button>
         </> 
