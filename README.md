@@ -25,3 +25,4 @@ https://explorer.testnet.mantle.xyz/address/0xAE80403DedCd77496e02a5290a1Fa6d71E
 
 ### Tweet Link
 
+https://twitter.com/The_Game_2030/status/1698186792883687537

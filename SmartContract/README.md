@@ -21,3 +21,5 @@ npx hardhat verify --network mantle-testnet 0xAE80403DedCd77496e02a5290a1Fa6d71E
 mantle testnet - 0xAE80403DedCd77496e02a5290a1Fa6d71E576b19  
 
 `#` Tweet Link
+
+https://twitter.com/The_Game_2030/status/1698186792883687537
