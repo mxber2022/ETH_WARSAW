@@ -22,3 +22,6 @@ mantletestnet ReqNFT contract - 0xAE80403DedCd77496e02a5290a1Fa6d71E576b19
 ### Contract deployment Link (mantle testnet explorer)
 
 https://explorer.testnet.mantle.xyz/address/0xAE80403DedCd77496e02a5290a1Fa6d71E576b19/contracts#address-tabs
+
+### Tweet Link
+

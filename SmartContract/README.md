@@ -19,3 +19,5 @@ npx hardhat verify --network mantle-testnet 0xAE80403DedCd77496e02a5290a1Fa6d71E
 `#` Contract deployment address
 
 mantle testnet - 0xAE80403DedCd77496e02a5290a1Fa6d71E576b19  
+
+`#` Tweet Link
