@@ -1,5 +1,27 @@
 .nav {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; /* No background color */
+    padding: 0; /* No padding */
+    color: white; /* Text color for "Asset Link" */
+  }
+  
+  .top-left {
+    flex: 1;
+  }
+  
+  .top-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for "Asset Link" */
+  .top-left p {
+    font-size: 50px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text bold */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    color: #333; /* Text color similar to "Mantle X Request" */
+  }
+  

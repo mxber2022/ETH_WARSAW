@@ -1,0 +1,63 @@
+/* Fetch.css */
+/* .fetch-container {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+ */
+
+.left-content {
+    width: 1;
+    padding: 20px;
+}
+
+.left-content img {
+    border-radius: 25px; /* Adjust the border-radius as needed for the desired amount of rounding */
+}
+
+.right-content {
+    width: 1; /* Adjust the width as needed */
+    padding: 20px;
+    min-width: 300px;
+}
+
+.description-container {
+    text-align: center; /* Center the text horizontally */
+    margin: 20px; /* Add spacing around the description */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Set the background color to white */
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333; /* Set the heading color to a dark gray */
+  }
+  
+  /* Style the input fields */
+  input[type="text"] {
+    width: 33%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Add rounded corners to the input fields */
+  }
+  
+  /* Style the buttons */
+  button {
+    background-color: #333; /* Set the button background color to dark gray */
+    color: #fff; /* Set the button text color to white */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Add rounded corners to the buttons */
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555; /* Change button color on hover */
+  }
+  
+.container {
+    display: flex !important;
+    flex-direction: row;
+}
